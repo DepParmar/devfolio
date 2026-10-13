@@ -18,7 +18,7 @@ Recruiters who don't play along still get a skimmable, printable CV; the ones wh
 - Keyboard-accessible prompt with a visible focus state, an `aria-live` output log, click-to-focus that respects text selection, and quick-command chips for touch screens
 - Full no-JavaScript fallback: the complete résumé is prerendered semantic HTML, the prompt disables itself, and a `<noscript>` note points readers to the text below
 - Man-page-styled sections with `user@host:~$ command` markers that mirror the terminal commands
-- `mailto:` contact actions built from the same email address shown on screen, plus social links
+- GitHub-first contact actions with optional mailto support when an email is added to the content data
 - Five-question FAQ with `FAQPage` JSON-LD structured data
 - CRT theme: true-black background, phosphor-green text, amber block cursor, subtle static scanlines, reduced-motion-safe cursor blink, and a print stylesheet that flips to black-on-white
 - Responsive down to 320 px with no horizontal overflow
@@ -84,7 +84,7 @@ static/
 
 ### Content and business data
 
-Everything on the page renders from `src/lib/data/resume.json`: name, role, location, summary and about paragraphs, email and subject line, the contact lede, social links, three jobs with impact bullets, four projects with stacks and links, grouped skills, and education. The `meta` block holds the site title, the `username`/`hostname` pair shown in every prompt, the hero tagline (also used as the meta description), and the playful SYNOPSIS line. FAQ questions and answers live in `src/lib/data/faq.json` and feed both the visible FAQ and its JSON-LD.
+Everything on the page renders from `src/lib/data/resume.json`: name, role, location, summary and about paragraphs, optional email details, the contact lede, social links, experience entries, projects with stacks and links, grouped skills, and education. The `meta` block holds the site title, the `username`/`hostname` pair shown in every prompt, the hero tagline (also used as the meta description), and the playful SYNOPSIS line. FAQ questions and answers live in `src/lib/data/faq.json` and feed both the visible FAQ and its JSON-LD.
 
 Terminal behavior is code, not copy: commands are a typed registry in `src/lib/terminal/commands.ts` — add an entry (name, aliases, summary, `run`) and `help`, tab completion, and the typo suggestions pick it up automatically.
 

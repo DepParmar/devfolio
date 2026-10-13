@@ -12,7 +12,7 @@
 		</p>
 		<p class="legal">
 			© {year}
-			{resume.name}. MIT-licensed template — fork it and make it yours.
+			{resume.name}. 			Digital products, creative direction, and systems by DAP Studios.
 		</p>
 	</div>
 </footer>

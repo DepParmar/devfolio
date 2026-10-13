@@ -1,6 +1,6 @@
 /*
  * Devfolio — global foundation.
- * CRT terminal theme: design tokens, base element styles, and the shared
+ * Light studio theme: design tokens, base element styles, and shared
  * man-page / terminal utilities. Section-specific rules live in each
  * component's scoped <style>.
  */
@@ -8,26 +8,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-	/* Palette — true black, phosphor green, classic amber */
-	--color-bg: #000000;
-	--color-panel: #020a04;
-	--color-raised: #05130a;
-	--color-green: #37f26d;
-	--color-green-bright: #8dffae;
-	--color-text: #c3e6c8;
-	--color-muted: #7ba887;
-	--color-dim: #48704f;
-	--color-amber: #ffb000;
-	--color-error: #ff6d64;
-	--color-line: #14301c;
-	--color-line-strong: #275233;
+	/* Palette — warm paper, ink, plum, and a creative coral accent */
+	--color-bg: #f7f4ef;
+	--color-panel: #fffdf9;
+	--color-raised: #f0ece5;
+	--color-green: #4b345f;
+	--color-green-bright: #68477f;
+	--color-text: #2e2933;
+	--color-muted: #6f6873;
+	--color-dim: #9b929d;
+	--color-amber: #d66a4a;
+	--color-error: #bd3e4b;
+	--color-line: #ded6ce;
+	--color-line-strong: #b8a9bc;
 
 	/* Typography */
 	--font-mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
 	/* Effects */
-	--glow-green: 0 0 10px rgba(55, 242, 109, 0.35);
-	--glow-amber: 0 0 8px rgba(255, 176, 0, 0.45);
+	--glow-green: 0 8px 24px rgba(75, 52, 95, 0.14);
+	--glow-amber: 0 8px 20px rgba(214, 106, 74, 0.18);
 
 	/* Shape and rhythm */
 	--radius-panel: 10px;
@@ -61,26 +61,21 @@ body {
 	line-height: 1.65;
 	color: var(--color-text);
 	background:
-		radial-gradient(120% 55% at 50% 0%, rgba(55, 242, 109, 0.06), transparent 60%)
-		var(--color-bg);
+		radial-gradient(80% 45% at 80% 0%, rgba(214, 106, 74, 0.08), transparent 62%),
+		linear-gradient(180deg, #fffdf9 0%, var(--color-bg) 55%);
 	-webkit-font-smoothing: antialiased;
 }
 
-/* Very subtle CRT scanlines — static, so nothing moves for anyone. */
+/* A soft paper texture keeps the light theme from feeling flat. */
 body::after {
 	content: '';
 	position: fixed;
 	inset: 0;
 	z-index: 60;
 	pointer-events: none;
-	background: repeating-linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.22) 0,
-		rgba(0, 0, 0, 0.22) 1px,
-		transparent 1px,
-		transparent 3px
-	);
-	opacity: 0.35;
+	background-image: radial-gradient(rgba(75, 52, 95, 0.08) 0.6px, transparent 0.6px);
+	background-size: 7px 7px;
+	opacity: 0.16;
 }
 
 img,
@@ -142,7 +137,7 @@ kbd {
 
 ::selection {
 	background: var(--color-green);
-	color: #001b06;
+	color: #fffdf9;
 }
 
 :focus-visible {
@@ -185,7 +180,7 @@ kbd {
 
 .btn:hover {
 	background: var(--color-green);
-	color: #001b06;
+	color: #fffdf9;
 	box-shadow: var(--glow-green);
 }
 

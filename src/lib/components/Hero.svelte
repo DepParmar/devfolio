@@ -13,13 +13,13 @@
 			<p class="role">{resume.role} <span class="sep" aria-hidden="true">·</span> {resume.location}</p>
 			<p class="tagline">{resume.meta.tagline}</p>
 			<div class="actions">
-				<a class="btn btn--amber" href={mailtoHref}>say hello</a>
+				<a class="btn btn--amber" href={mailtoHref ?? '#contact'}>start a project</a>
 				{#if github}
-					<a class="btn" href={github.href} target="_blank" rel="noreferrer">github</a>
+					<a class="btn" href="#projects">see our work</a>
 				{/if}
 			</div>
 			<p class="fallback-note">
-				Not a fan of terminals? The whole résumé reads as plain HTML
+				Not a fan of terminals? Explore our services and recent work
 				<a href="#resume">just below</a> — JavaScript optional.
 			</p>
 		</div>

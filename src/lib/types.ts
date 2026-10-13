@@ -17,17 +17,6 @@ export interface LinkItem {
 	href: string;
 }
 
-export interface ExperienceEntry {
-	company: string;
-	title: string;
-	start: string;
-	/** Use "present" for a current role. */
-	end: string;
-	location: string;
-	/** Impact bullets — lead with the outcome. */
-	bullets: string[];
-}
-
 export interface Project {
 	name: string;
 	description: string;
@@ -35,16 +24,20 @@ export interface Project {
 	links: LinkItem[];
 }
 
+export interface Service {
+	title: string;
+	description: string;
+	deliverables: string[];
+}
+
+export interface Domain {
+	name: string;
+	description: string;
+}
+
 export interface SkillGroup {
 	group: string;
 	items: string[];
-}
-
-export interface EducationEntry {
-	school: string;
-	program: string;
-	years: string;
-	note?: string;
 }
 
 export interface ResumeContent {
@@ -56,15 +49,15 @@ export interface ResumeContent {
 	summary: string;
 	/** Additional ABOUT paragraphs. */
 	about: string[];
-	email: string;
-	emailSubject: string;
+	email?: string;
+	emailSubject?: string;
 	/** One line above the email address in the CONTACT section and command. */
 	contactLede: string;
 	socials: LinkItem[];
-	experience: ExperienceEntry[];
 	projects: Project[];
+	services: Service[];
+	domains: Domain[];
 	skills: SkillGroup[];
-	education: EducationEntry[];
 }
 
 export interface Faq {

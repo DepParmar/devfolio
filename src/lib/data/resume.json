@@ -1,124 +1,102 @@
 {
 	"meta": {
-		"siteTitle": "Devfolio",
-		"username": "june",
-		"hostname": "devfolio",
-		"tagline": "Sync engines, collaborative editors, and the boring reliability work in between. Explore ten years of it from the terminal — or just scroll, the whole résumé is plain HTML underneath.",
-		"synopsis": "june-park [--hire] [--freelance] [--coffee-chat]"
+		"siteTitle": "DAP Studios — Digital Products That Work",
+		"username": "dap",
+		"hostname": "dap-studios",
+		"tagline": "We design and build websites, apps, and business systems that help ambitious teams look better, work smarter, and grow.",
+		"synopsis": "dap [--web] [--mobile] [--automation] [--start-a-project]"
 	},
-	"name": "June Park",
-	"role": "Senior Full-Stack Engineer",
-	"location": "Berlin, Germany",
-	"summary": "I build web software that stays fast on hotel Wi-Fi and legible six months later. Ten years in, my favourite problems still live where the browser meets the backend: sync engines, collaborative editors, and the boring reliability work that makes products feel expensive.",
+	"name": "DAP Studios",
+	"role": "Digital Product & Software Studio",
+	"location": "Web · Mobile · Automation",
+	"summary": "We turn practical business ideas into polished digital products. From a high-converting website to a custom internal system, DAP Studios helps businesses move from problem to production with clarity and care.",
 	"about": [
-		"Currently at Fernweh Labs, where I lead the web side of a collaborative trip-planning editor used by around 300,000 travellers a month. Before that I spent three years keeping point-of-sale software selling through dropped connections at Kassenwerk, and three more at Studio Brandt & Co shipping agency work fast enough to survive any audit.",
-		"Outside work hours I maintain a small stable of open-source tools — a status-page generator, a Postgres migration linter — and answer more U-Bahn timetable questions than any hobby project justifies. Open to senior full-stack or platform roles in Berlin, or remote across the EU."
+		"Good software should make a business easier to trust and easier to run. We combine clean interfaces, thoughtful user journeys, and dependable engineering to create products people enjoy using.",
+		"Our work spans TypeScript and React for modern web experiences, Flutter and Dart for mobile, Python for focused automation and desktop tooling, and the practical integrations that connect a product to the way a team already works.",
+		"Have an idea, a process that needs improving, or a digital presence that no longer represents your business? Let’s turn it into something useful."
 	],
-	"email": "june@junepark.example",
-	"emailSubject": "Hello June — found your devfolio",
-	"contactLede": "The inbox is open — for roles, contract work, or U-Bahn timetable questions.",
 	"socials": [
 		{
 			"label": "GitHub",
-			"href": "https://github.com/junepark-dev"
+			"href": "https://github.com/DepParmar"
 		},
 		{
-			"label": "LinkedIn",
-			"href": "https://www.linkedin.com/in/junepark-dev"
-		},
-		{
-			"label": "Bluesky",
-			"href": "https://bsky.app/profile/junepark.example"
-		}
-	],
-	"experience": [
-		{
-			"company": "Fernweh Labs",
-			"title": "Senior Full-Stack Engineer",
-			"start": "2022",
-			"end": "present",
-			"location": "Berlin",
-			"bullets": [
-				"Led the rebuild of the collaborative trip editor from a jQuery monolith to SvelteKit and TypeScript; p75 interaction latency dropped from 480 ms to 90 ms.",
-				"Designed the itinerary sync service (Fastify, PostgreSQL, Redis) that now carries 40,000 concurrent editing sessions in peak season without paging anyone.",
-				"Introduced contract tests and preview deployments; releases went from fortnightly to daily and rollbacks fell by two thirds.",
-				"Mentor two engineers and run the guild that owns the web performance budget."
-			]
-		},
-		{
-			"company": "Kassenwerk",
-			"title": "Full-Stack Engineer",
-			"start": "2019",
-			"end": "2022",
-			"location": "Berlin",
-			"bullets": [
-				"Built the offline-first order queue for a point-of-sale web app — IndexedDB plus background sync — so cafés kept selling through network drops.",
-				"Shipped the payout reconciliation dashboard used by 1,200 merchants a day; support tickets about missing payouts fell 35%.",
-				"Replaced REST polling with server-sent events on live order boards, roughly halving API traffic."
-			]
-		},
-		{
-			"company": "Studio Brandt & Co",
-			"title": "Frontend Developer",
-			"start": "2016",
-			"end": "2019",
-			"location": "Hamburg",
-			"bullets": [
-				"Delivered twenty-plus marketing and e-commerce sites; owned performance budgets (LCP under 2 s on throttled 3G) and accessibility sign-off.",
-				"Built the studio's internal component library, reused across a dozen client projects."
-			]
+			"label": "DAP Studios",
+			"href": "https://github.com/DAP-Studios"
 		}
 	],
 	"projects": [
 		{
-			"name": "tidewatch",
-			"description": "Static status-page generator: point it at your health-check endpoints and it renders uptime history as a fast, dependency-free page.",
-			"stack": ["Go", "SQLite", "SvelteKit"],
+			"name": "beyond-services-website",
+			"description": "A modern services website built to give a business a sharper digital presence and a clearer path from discovery to enquiry.",
+			"stack": ["JavaScript", "React", "Vite"],
 			"links": [
 				{
 					"label": "source",
-					"href": "https://github.com/junepark-dev/tidewatch"
+					"href": "https://github.com/DepParmar/beyond-services-website"
+				}
+			]
+		},
+		{
+			"name": "subh-engineering-works",
+			"description": "A production-ready engineering company website focused on trust, clear service presentation, and a polished conversion experience.",
+			"stack": ["TypeScript", "React", "Vite"],
+			"links": [
+				{
+					"label": "source",
+					"href": "https://github.com/DAP-Studios/subh-engineering-works"
 				},
 				{
-					"label": "demo",
-					"href": "https://tidewatch.junepark.example"
+					"label": "live",
+					"href": "https://subh-engineering-works.vercel.app"
 				}
 			]
 		},
 		{
-			"name": "pgline",
-			"description": "CI linter for Postgres migrations that flags locking foot-guns — table rewrites, unindexed foreign keys — before they reach production.",
-			"stack": ["TypeScript", "Node.js"],
+			"name": "millennium-control-system",
+			"description": "A control and operations interface for managing real-world workflows through a focused, accessible web dashboard.",
+			"stack": ["JavaScript", "React", "Automation"],
 			"links": [
 				{
 					"label": "source",
-					"href": "https://github.com/junepark-dev/pgline"
+					"href": "https://github.com/DAP-Studios/millinniumcontrolsystem"
+				}
+			]
+		},
+		{
+			"name": "aurix",
+			"description": "Professional billing and invoicing software with customer management, PDF documents, payment tracking, reporting, backups, themes, and audit trails.",
+			"stack": ["Python", "Tkinter", "MVC", "ReportLab"],
+			"links": [
+				{
+					"label": "source",
+					"href": "https://github.com/DAP-Studios/aurix"
+				}
+			]
+		},
+		{
+			"name": "invoice-app",
+			"description": "A clean invoice and quotation management system with dashboards, customer records, analytics, print-ready documents, and local persistence.",
+			"stack": ["React", "TypeScript", "Vite"],
+			"links": [
+				{
+					"label": "source",
+					"href": "https://github.com/DAP-Studios/invoice-app"
 				},
 				{
-					"label": "docs",
-					"href": "https://pgline.junepark.example"
+					"label": "live",
+					"href": "https://thedap.vercel.app"
 				}
 			]
 		},
 		{
-			"name": "shelfmark",
-			"description": "Self-hosted read-it-later app with full-text search and EPUB export; the whole library syncs as a single SQLite file.",
-			"stack": ["Node.js", "Fastify", "Svelte", "SQLite"],
+			"name": "devfolio",
+			"description": "This terminal-first portfolio: a memorable interactive shell backed by a fully prerendered, accessible résumé.",
+			"stack": ["SvelteKit", "Svelte 5", "TypeScript"],
 			"links": [
 				{
 					"label": "source",
-					"href": "https://github.com/junepark-dev/shelfmark"
-				}
-			]
-		},
-		{
-			"name": "ubahn-live",
-			"description": "Terminal dashboard for Berlin U-Bahn departures, because leaving the flat ninety seconds earlier matters.",
-			"stack": ["Go", "Bubble Tea"],
-			"links": [
-				{
-					"label": "source",
-					"href": "https://github.com/junepark-dev/ubahn-live"
+					"href": "https://github.com/DepParmar/devfolio"
 				}
 			]
 		}
@@ -126,33 +104,78 @@
 	"skills": [
 		{
 			"group": "languages",
-			"items": ["TypeScript", "JavaScript", "Go", "SQL", "Bash"]
+			"items": ["TypeScript", "JavaScript", "Dart", "Python", "HTML & CSS"]
 		},
 		{
 			"group": "frontend",
-			"items": ["Svelte & SvelteKit", "React", "HTML & modern CSS", "Accessibility (WCAG 2.2)", "Performance profiling"]
+			"items": ["React", "Svelte & SvelteKit", "Flutter", "Responsive UI", "Accessibility", "Product UX"]
 		},
 		{
 			"group": "backend",
-			"items": ["Node.js", "Fastify", "PostgreSQL", "Redis", "SQLite", "REST & server-sent events"]
+			"items": ["Node.js", "REST APIs", "Data-driven apps", "Local-first workflows", "Business automation"]
 		},
 		{
 			"group": "tooling",
-			"items": ["Docker", "GitHub Actions", "Terraform", "Grafana", "Playwright", "Vitest"]
-		}
-	],
-	"education": [
-		{
-			"school": "Technische Universität Berlin",
-			"program": "B.Sc. Computer Science",
-			"years": "2012 – 2016",
-			"note": "Thesis: CRDT-based collaborative editing over unreliable connections."
+			"items": ["Git & GitHub", "Vite", "Docker", "Vercel", "PDF generation", "Rapid prototyping"]
 		},
 		{
-			"school": "Recurse Center, New York",
-			"program": "Self-directed programming retreat",
-			"years": "2018",
-			"note": "Twelve weeks of compilers, generative ASCII art, and pair programming."
+			"group": "creative",
+			"items": ["Graphic design", "Brand identity", "Social media creative", "Video editing", "Content systems", "Marketing campaigns"]
 		}
-	]
+	],
+	"services": [
+		{
+			"title": "Websites that win trust",
+			"description": "Fast, responsive websites that explain what you do clearly and turn attention into real enquiries.",
+			"deliverables": ["Strategy & page structure", "Responsive UI", "SEO-ready foundations", "Deployment support"]
+		},
+		{
+			"title": "Apps built around users",
+			"description": "Web and mobile applications that simplify a workflow, launch a new idea, or give customers a better way to interact with your business.",
+			"deliverables": ["UX flows & interfaces", "React / TypeScript apps", "Flutter mobile apps", "API integration"]
+		},
+		{
+			"title": "Systems that save time",
+			"description": "Custom dashboards, invoicing tools, automation, and internal systems that replace repetitive work with a reliable process.",
+			"deliverables": ["Workflow mapping", "Business dashboards", "Automation tooling", "Data & reporting"]
+		},
+		{
+			"title": "Branding with a point of view",
+			"description": "A clear visual identity that makes your business recognisable, consistent, and ready to show up with confidence.",
+			"deliverables": ["Logo direction", "Brand colour systems", "Typography & visual language", "Brand guidelines"]
+		},
+		{
+			"title": "Creative content that travels",
+			"description": "Graphics, social content, and edited video that turn your ideas into attention-worthy stories across the channels your customers use.",
+			"deliverables": ["Graphic design", "Social media assets", "Short-form video editing", "Campaign creative"]
+		},
+		{
+			"title": "Marketing that feels human",
+			"description": "Practical marketing support that connects your message, your visuals, and your digital presence into one memorable customer journey.",
+			"deliverables": ["Content direction", "Campaign planning", "Landing pages", "Conversion improvements"]
+		}
+	],
+	"domains": [
+		{
+			"name": "Engineering & services",
+			"description": "Professional websites and digital experiences that help technical businesses present their work, earn trust, and win enquiries."
+		},
+		{
+			"name": "Food & hospitality",
+			"description": "Ordering, inventory, and customer-facing tools that help busy teams serve people faster and keep operations organised."
+		},
+		{
+			"name": "Business operations",
+			"description": "Invoices, quotations, dashboards, reports, and custom workflows that replace spreadsheets and reduce everyday friction."
+		},
+		{
+			"name": "Automation & control",
+			"description": "Interfaces and systems that connect real-world processes to clear, manageable digital controls."
+		},
+		{
+			"name": "IoT & electrical systems",
+			"description": "Practical software experiences for connected products, monitoring, automation, and technical service teams."
+		}
+	],
+	"contactLede": "Tell us what you are building, what is slowing you down, or what your customers need next. We will help shape the right first step."
 }

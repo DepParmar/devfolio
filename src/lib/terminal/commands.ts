@@ -41,6 +41,35 @@ export const commands: TerminalCommand[] = [
 			)
 	},
 	{
+		name: 'domains',
+		aliases: ['industries'],
+		summary: 'industries and business domains we understand',
+		run: () =>
+			lines(
+				heading('DOMAINS'),
+				...resume.domains.flatMap((domain, index) => [
+					...(index > 0 ? [blank()] : []),
+					text(domain.name, 'accent'),
+					text(domain.description, 'default', 1)
+				])
+			)
+	},
+	{
+		name: 'services',
+		aliases: ['offerings'],
+		summary: 'ways DAP Studios can help your business',
+		run: () =>
+			lines(
+				heading('SERVICES'),
+				...resume.services.flatMap((service, index) => [
+					...(index > 0 ? [blank()] : []),
+					text(service.title, 'accent'),
+					text(service.description, 'default', 1),
+					...service.deliverables.map((deliverable) => text(`- ${deliverable}`, 'muted', 1))
+				])
+			)
+	},
+	{
 		name: 'about',
 		aliases: [],
 		summary: 'summary, role, and location',
@@ -56,24 +85,9 @@ export const commands: TerminalCommand[] = [
 			)
 	},
 	{
-		name: 'experience',
-		aliases: ['work'],
-		summary: 'three roles with impact bullets',
-		run: () =>
-			lines(
-				heading('EXPERIENCE'),
-				...resume.experience.flatMap((job, index) => [
-					...(index > 0 ? [blank()] : []),
-					text(`${job.title} · ${job.company}`, 'accent'),
-					text(`${job.start} – ${job.end} · ${job.location}`, 'muted', 1),
-					...job.bullets.map((bullet) => text(`- ${bullet}`, 'default', 1))
-				])
-			)
-	},
-	{
 		name: 'projects',
 		aliases: [],
-		summary: 'four side projects with stack and links',
+		summary: `${resume.projects.length} selected projects with stack and links`,
 		run: () =>
 			lines(
 				heading('PROJECTS'),
@@ -97,29 +111,16 @@ export const commands: TerminalCommand[] = [
 			)
 	},
 	{
-		name: 'education',
-		aliases: [],
-		summary: 'degrees and detours',
-		run: () =>
-			lines(
-				heading('EDUCATION'),
-				...resume.education.flatMap((entry, index) => [
-					...(index > 0 ? [blank()] : []),
-					text(`${entry.program} · ${entry.school}`, 'accent'),
-					text(entry.years, 'muted', 1),
-					...(entry.note ? [text(entry.note, 'default', 1)] : [])
-				])
-			)
-	},
-	{
 		name: 'contact',
 		aliases: [],
-		summary: 'email and social links',
+		summary: 'GitHub and social links',
 		run: () =>
 			lines(
 				heading('CONTACT'),
 				text(resume.contactLede),
-				links([{ label: resume.email, href: mailtoHref }], 1),
+				...(resume.email && mailtoHref
+					? [links([{ label: resume.email, href: mailtoHref }], 1)]
+					: []),
 				links(resume.socials, 1),
 				blank(),
 				text(`based in ${resume.location}`, 'muted')

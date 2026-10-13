@@ -5,7 +5,8 @@
 
 	const navItems = [
 		{ label: 'about', href: '#about' },
-		{ label: 'experience', href: '#experience' },
+		{ label: 'services', href: '#services' },
+		{ label: 'domains', href: '#domains' },
 		{ label: 'projects', href: '#projects' },
 		{ label: 'skills', href: '#skills' },
 		{ label: 'contact', href: '#contact' }
@@ -33,7 +34,7 @@
 		top: 0;
 		z-index: 50;
 		border-bottom: 1px solid var(--color-line);
-		background: rgba(0, 0, 0, 0.88);
+		background: rgba(255, 253, 249, 0.9);
 		backdrop-filter: blur(6px);
 	}
 

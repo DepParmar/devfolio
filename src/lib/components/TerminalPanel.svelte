@@ -11,7 +11,7 @@
 		lines: TerminalLine[];
 	}
 
-	const QUICK_COMMANDS = ['help', 'about', 'experience', 'projects', 'skills', 'contact'];
+	const QUICK_COMMANDS = ['help', 'services', 'domains', 'projects', 'contact'];
 
 	let ready = $state(false);
 	let cleared = $state(false);
@@ -132,7 +132,7 @@
 	}
 </script>
 
-<section class="terminal" aria-label="Interactive terminal résumé">
+<section class="terminal" aria-label="Interactive DAP Studios terminal">
 	<!-- svelte-ignore a11y_no_static_element_interactions, a11y_click_events_have_key_events -->
 	<div class="frame" onclick={focusInput}>
 		<div class="titlebar" aria-hidden="true">
@@ -147,15 +147,15 @@
 				{#if !cleared}
 					<div class="welcome">
 						<pre class="banner" aria-hidden="true">{ASCII_BANNER}</pre>
-						<p class="sr-only">{resume.meta.siteTitle} — an interactive terminal résumé.</p>
+						<p class="sr-only">{resume.meta.siteTitle} — an interactive studio website.</p>
 						<p class="caption">{resume.name} — {resume.role} · {resume.location}</p>
 						<p class="hint">
-							Type <kbd>help</kbd> to list commands. Try <kbd>projects</kbd> or
-							<kbd>experience</kbd>.
+							Type <kbd>help</kbd> to explore the studio. Try <kbd>services</kbd> or
+							<kbd>projects</kbd>.
 						</p>
 						<noscript>
 							<p class="noscript">
-								JavaScript is off, so this prompt stays quiet — the full résumé continues as
+								JavaScript is off, so this prompt stays quiet — the full studio profile continues as
 								regular HTML <a href="#resume">just below</a>.
 							</p>
 						</noscript>
@@ -245,9 +245,9 @@
 		border-radius: var(--radius-panel);
 		background: var(--color-panel);
 		box-shadow:
-			0 0 0 1px rgba(55, 242, 109, 0.06),
-			0 0 44px rgba(55, 242, 109, 0.13),
-			inset 0 0 70px rgba(55, 242, 109, 0.05);
+			0 0 0 1px rgba(75, 52, 95, 0.06),
+			0 14px 44px rgba(75, 52, 95, 0.12),
+			inset 0 0 70px rgba(214, 106, 74, 0.04);
 	}
 
 	.titlebar {
